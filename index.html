@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[YOUR FULL NAME] | Portfolio & Resume</title>
+    <meta name="description" content="Professional portfolio and online resume of [YOUR FULL NAME], an Aspiring Software Developer focused on building useful applications.">
+
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-logo">
+            <span class="logo-text">[YOUR INITIALS]</span>
+        </div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Work</a>
+            <a href="#journey">Journey</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+            <i data-lucide="menu"></i>
+        </button>
+    </nav>
+
+    <main>
+        <!-- Section 1: Hero -->
+        <section id="hero" class="hero">
+            <div class="hero-bg" id="hero-visual">
+                <!-- Dynamic technical visual will be injected here or handled via CSS -->
+                <div class="grid-overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-top">
+                    <span class="hero-label" data-reveal>Available for opportunities</span>
+                    <span class="hero-location" data-reveal>[YOUR LOCATION]</span>
+                </div>
+
+                <h1 class="hero-name" data-reveal>[YOUR FULL NAME]</h1>
+                <h2 class="hero-title" data-reveal>[YOUR PROFESSIONAL TITLE]</h2>
+
+                <p class="hero-intro" data-reveal>
+                    Passionate about programming, software development, and building scalable applications that solve real-world problems.
+                    Focused on the intersection of efficiency, clean code, and user-centric design.
+                </p>
+
+                <div class="hero-actions" data-reveal>
+                    <a href="#projects" class="btn btn-primary">Explore My Work</a>
+                    <a href="assets/resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+                </div>
+
+                <div class="hero-socials" data-reveal>
+                    <a href="[YOUR GITHUB URL]" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    <a href="[YOUR LINKEDIN URL]" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="mailto:[YOUR EMAIL ADDRESS]" aria-label="Email"><i data-lucide="mail"></i></a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span>Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- Section 2: About Me -->
+        <section id="about" class="about dark-section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow">ABOUT ME</span>
+                    <h2 class="section-title">BUILDING. LEARNING. IMPROVING.</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-main" data-reveal>
+                        <p class="about-text">
+                            I am a developer driven by curiosity and a relentless desire to understand how things work under the hood.
+                            My journey in software development is marked by a commitment to continuous learning and a passion for creating
+                            tools that simplify complexity.
+                        </p>
+                        <p class="about-text">
+                            Whether it's architecting a database, optimizing a frontend experience, or diving into machine learning,
+                            I approach every challenge with a mindset of precision and scalability.
+                        </p>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-card" data-reveal>
+                            <span class="stat-label">Current Focus</span>
+                            <p class="stat-value">[e.g. Full Stack Development]</p>
+                        </div>
+                        <div class="stat-card" data-reveal>
+                            <span class="stat-label">Core Stack</span>
+                            <p class="stat-value">[e.g. Python, JS, SQL]</p>
+                        </div>
+                        <div class="stat-card" data-reveal>
+                            <span class="stat-label">Learning Now</span>
+                            <p class="stat-value">[e.g. Kubernetes, Rust]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Technical Skills -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow">TECHNICAL STACK</span>
+                    <h2 class="section-title">SYSTEM CAPABILITIES</h2>
+                </div>
+
+                <div class="skills-dashboard" id="skills-container">
+                    <!-- Dynamic Skill Categories will be injected here via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Featured Projects -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow">SELECTED WORK</span>
+                    <h2 class="section-title">ENGINEERED SOLUTIONS</h2>
+                </div>
+
+                <div class="projects-grid" id="projects-container">
+                    <!-- Dynamic Project Cards will be injected here via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Journey -->
+        <section id="journey" class="journey dark-section">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow">THE ROADMAP</span>
+                    <h2 class="section-title">DEVELOPMENT JOURNEY</h2>
+                </div>
+
+                <div class="timeline" id="timeline-container">
+                    <!-- Dynamic Timeline Entries will be injected here via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Contact -->
+        <section id="contact" class="contact">
+            <div class="contact-frame">
+                <div class="contact-inner">
+                    <div class="contact-content" data-reveal>
+                        <h2 class="closing-title">LET'S BUILD SOMETHING USEFUL.</h2>
+                        <p class="closing-text">
+                            I'm always open to discussing new projects, internships, or collaborations.
+                            If you're looking for a developer who values precision and growth, let's connect.
+                        </p>
+
+                        <div class="contact-links">
+                            <a href="mailto:[YOUR EMAIL ADDRESS]" class="contact-email">[YOUR EMAIL ADDRESS]</a>
+                            <div class="contact-social-icons">
+                                <a href="[YOUR GITHUB URL]" target="_blank"><i data-lucide="github"></i></a>
+                                <a href="[YOUR LINKEDIN URL]" target="_blank"><i data-lucide="linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="main-footer">
+                <div class="footer-content">
+                    <p>&copy; <span id="year"></span> [YOUR FULL NAME]. All rights reserved.</p>
+                    <nav class="footer-nav">
+                        <a href="#hero">Top</a>
+                        <a href="#projects">Work</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>
