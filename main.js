@@ -5,13 +5,12 @@
 // 1. Configuration & Data
 const CONFIG = {
     user: {
-        name: "[YOUR FULL NAME]",
-        initials: "[YFN]",
-        title: "[YOUR PROFESSIONAL TITLE]",
-        location: "[YOUR LOCATION]",
-        email: "[YOUR EMAIL ADDRESS]",
-        github: "[YOUR GITHUB URL]",
-        linkedin: "[YOUR LINKEDIN URL]",
+        name: "ALFREDO LEMMUEL REYES",
+        initials: "GLIZYMANN",
+        title: "STUDENT",
+        location: "CABANATUAN CITY NEUVA ECIJA PHILIPPINES",
+        email: "REYESALFREDOLEMMUEL@GMAIL.COM",
+        github: "https://github.com/Alfredy-yyx123",
     },
     skills: [
         {
@@ -52,7 +51,7 @@ const CONFIG = {
             link: "#",
             repo: "#",
             status: "Completed",
-            image: "https://via.placeholder.com/800x450?text=Stack+Lens"
+            image: "assets/Gemini_Generated_Image_m6mvsgm6mvsgm6mv.jpg"
         },
         {
             id: "02",
@@ -78,20 +77,20 @@ const CONFIG = {
             link: "#",
             repo: "#",
             status: "Completed",
-            image: "https://via.placeholder.com/800x450?text=Data+Analytics+System"
+            image: "assets/11742c_e68a4f8b17924121870eab8334dbd73d~mv2.png"
         }
     ],
     journey: [
         {
             year: "2024 - Present",
-            title: "Professional Development",
+            title: "4th year College Student",
             description: "Focused on mastering full-stack architectures and exploring the intersection of AI and software engineering.",
-            tags: ["Full-Stack", "Cloud Computing", "AI"]
+            tags: ["Data Engineering", "Cloud Computing", "AI"]
         },
         {
             year: "2021 - 2023",
             title: "Academic Journey",
-            description: "Pursuing [YOUR DEGREE] at [YOUR SCHOOL]. Focused on software engineering principles and database management.",
+            description: "Pursuing Information Technology Database Major at Nueva Ecija University of Science And Technology. Focused on software engineering principles and database management.",
             tags: ["Computer Science", "Algorithms", "Databases"]
         },
         {
@@ -105,6 +104,8 @@ const CONFIG = {
 
 // 2. Core Initialization
 document.addEventListener('DOMContentLoaded', () => {
+    initBackground();
+    setupCursor();
     initLucide();
     renderSkills();
     renderProjects();
@@ -120,6 +121,122 @@ function initLucide() {
 
 function setYear() {
     document.getElementById('year').textContent = new Date().getFullYear();
+}
+
+// --- Particle & Background System ---
+class BackgroundManager {
+    constructor() {
+        this.canvas = document.getElementById('particle-canvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.grid = document.getElementById('grid-overlay');
+        this.particles = [];
+        this.mouse = { x: null, y: null };
+        this.init();
+    }
+
+    init() {
+        this.resize();
+        window.addEventListener('resize', () => this.resize());
+        window.addEventListener('mousemove', (e) => {
+            this.mouse.x = e.clientX;
+            this.mouse.y = e.clientY;
+
+            const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+            const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+            if (this.grid) this.grid.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+
+        for (let i = 0; i < 150; i++) {
+            this.particles.push(new Particle(this.canvas.width, this.canvas.height));
+        }
+        this.animate();
+    }
+
+    resize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+    }
+
+    animate() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+        for (let i = 0; i < this.particles.length; i++) {
+            for (let j = i + 1; j < this.particles.length; j++) {
+                const dist = this.getDist(this.particles[i], this.particles[j]);
+                if (dist < 150) {
+                    this.ctx.strokeStyle = `rgba(2, 210, 227, ${0.3 - dist/500})`;
+                    this.ctx.lineWidth = 0.8;
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
+                    this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
+                    this.ctx.stroke();
+                }
+            }
+        }
+
+        this.particles.forEach(p => {
+            p.update(this.mouse);
+            p.draw(this.ctx);
+        });
+        requestAnimationFrame(() => this.animate());
+    }
+
+    getDist(p1, p2) {
+        return Math.sqrt((p1.x - p2.x)**2 + (p1.y - p2.y)**2);
+    }
+}
+
+class Particle {
+    constructor(w, h) {
+        this.x = Math.random() * w;
+        this.y = Math.random() * h;
+        this.size = Math.random() * 2 + 1;
+        this.vx = (Math.random() - 0.5) * 0.8;
+        this.vy = (Math.random() - 0.5) * 0.8;
+    }
+
+    update(mouse) {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0 || this.x > window.innerWidth) this.vx *= -1;
+        if (this.y < 0 || this.y > window.innerHeight) this.vy *= -1;
+
+        if (mouse.x) {
+            const dx = mouse.x - this.x;
+            const dy = mouse.y - this.y;
+            const dist = Math.sqrt(dx*dx + dy*dy);
+            if (dist < 200) {
+                this.x -= dx * 0.02;
+                this.y -= dy * 0.02;
+            }
+        }
+    }
+
+    draw(ctx) {
+        ctx.fillStyle = 'rgba(2, 210, 227, 0.8)';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+    }
+}
+
+function initBackground() {
+    new BackgroundManager();
+}
+
+function setupCursor() {
+    const cursor = document.getElementById('cursor');
+    if (!cursor) return;
+    window.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    document.querySelectorAll('a, button, .skill-tag, .stat-card').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
 }
 
 // 3. Dynamic Rendering
@@ -138,7 +255,6 @@ function renderSkills() {
         </div>
     `).join('');
 
-    // Re-init reveal since we added new elements
     setupAnimations();
 }
 
@@ -193,7 +309,7 @@ function renderJourney() {
                 <h3 class="timeline-title" style="font-family: var(--font-heading); text-transform: uppercase; margin-bottom: 10px; font-size: 1.2rem;">${item.title}</h3>
                 <p class="timeline-text" style="color: rgba(247, 250, 251, 0.8); margin-bottom: 15px;">${item.description}</p>
                 <div class="journey-tags" style="display: flex; gap: 10px; flex-wrap: wrap;">
-                    ${item.tags.map(tag => `<span class="skill-tag" style="border-color: var(--border-dark); color: var(--bg-light); font-size: 0.7rem;">${tag}</span>`).join('')}
+                    ${item.tags.map(tag => `<span class="skill-tag" style="border-color: var(--border-dark); color: var(--text-main); font-size: 0.7rem;">${tag}</span>`).join('')}
                 </div>
             </div>
         </div>
@@ -213,7 +329,6 @@ function setupNavigation() {
         }
     });
 
-    // Simple mobile menu toggle (could be expanded)
     const toggle = document.querySelector('.mobile-nav-toggle');
     if (toggle) {
         toggle.addEventListener('click', () => {
@@ -239,9 +354,3 @@ function setupAnimations() {
         observer.observe(el);
     });
 }
-
-// Replace the broken setupAnimations with the fixed one
-// Since I wrote the file, I'll just rewrite the logic internally.
-// I'm adding it as a separate function to the file if I'm doing an Edit.
-// But since I'm doing a Write, I'll just ensure it's correct from the start.
-// Wait, I already wrote the file. I'll just edit the function.

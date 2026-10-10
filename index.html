@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[YOUR FULL NAME] | Portfolio & Resume</title>
+    <title>Glizzy | Portfolio & Resume</title>
     <meta name="description" content="Professional portfolio and online resume of [YOUR FULL NAME], an Aspiring Software Developer focused on building useful applications.">
 
     <!-- Typography -->
@@ -17,10 +17,10 @@
     <style>
         :root {
             /* DARK TECH PALETTE */
-            --bg-light: #0e0f14; /* Now Dark */
-            --bg-dark: #050507;  /* Deeper Dark */
-            --text-main: #f7fafb; /* Now Light */
-            --text-muted: #9ca3af;
+            --bg-light: #0e0f14;
+            --bg-dark: #050507;
+            --text-main: #ffffff; /* Increased contrast to pure white */
+            --text-muted: #d1d5db; /* Lighter grey for better readability */
             --accent-cyan: #02d2e3;
             --border-color: rgba(2, 210, 227, 0.15); /* Cyan tint */
             --border-dark: rgba(2, 210, 227, 0.4);
@@ -785,7 +785,7 @@
 
         .contact-inner {
             background: var(--bg-dark);
-            color: var(--bg-light);
+            color: var(--text-main);
             padding: 100px 40px;
             text-align: center;
         }
@@ -802,7 +802,7 @@
             font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto 50px auto;
-            color: rgba(247, 250, 251, 0.7);
+            color: var(--text-muted);
         }
 
         .contact-links {
@@ -815,7 +815,7 @@
         .contact-email {
             font-family: var(--font-heading);
             font-size: clamp(1.5rem, 4vw, 3rem);
-            color: var(--bg-light);
+            color: var(--text-main);
             text-decoration: none;
             text-transform: uppercase;
             transition: var(--transition-smooth);
@@ -832,7 +832,7 @@
         }
 
         .contact-social-icons a {
-            color: var(--bg-light);
+            color: var(--text-main);
             transition: var(--transition-smooth);
             cursor: none !important;
         }
@@ -927,7 +927,7 @@
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="nav-logo">
-            <span class="logo-text">[YOUR INITIALS]</span>
+            <span class="logo-text"></span>
         </div>
         <div class="nav-links">
             <a href="#hero">Home</a>
@@ -948,11 +948,11 @@
             <div class="hero-content">
                 <div class="hero-top">
                     <span class="hero-label">Available for opportunities</span>
-                    <span class="hero-location">[YOUR LOCATION]</span>
+                    <span class="hero-location">Cabanatuan City N.E</span>
                 </div>
 
-                <h1 class="hero-name">[YOUR FULL NAME]</h1>
-                <h2 class="hero-title">[YOUR PROFESSIONAL TITLE]</h2>
+                <h1 class="hero-name">Reyes, Alfredo Lemmuel</h1>
+                <h2 class="hero-title">4th Year College Student</h2>
 
                 <p class="hero-intro">
                     Passionate about programming, software development, and building scalable applications that solve real-world problems.
@@ -965,9 +965,9 @@
                 </div>
 
                 <div class="hero-socials">
-                    <a href="[YOUR GITHUB URL]" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    <a href="https://github.com/Alfredy-yyx123" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
                     <a href="[YOUR LINKEDIN URL]" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                    <a href="mailto:[YOUR EMAIL ADDRESS]" aria-label="Email"><i data-lucide="mail"></i></a>
+                    <a href="mailto:Reyesalfredolemmuel@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
                 </div>
             </div>
 
@@ -1001,7 +1001,7 @@
                     <div class="about-stats">
                         <div class="stat-card">
                             <span class="stat-label">Current Focus</span>
-                            <p class="stat-value">[e.g. Full Stack Development]</p>
+                            <p class="stat-value">[e.g. Large Langguage Model]</p>
                         </div>
                         <div class="stat-card">
                             <span class="stat-label">Core Stack</span>
@@ -1009,7 +1009,7 @@
                         </div>
                         <div class="stat-card">
                             <span class="stat-label">Learning Now</span>
-                            <p class="stat-value">[e.g. Kubernetes, Rust]</p>
+                            <p class="stat-value">[e.g. pyTorch, TensorFlow]</p>
                         </div>
                     </div>
                 </div>
@@ -1070,9 +1070,9 @@
                         </p>
 
                         <div class="contact-links">
-                            <a href="mailto:[YOUR EMAIL ADDRESS]" class="contact-email">[YOUR EMAIL ADDRESS]</a>
+                            <a href="mailto:Reyesalfredolemmuel@gmail.com" class="contact-email">Reyesalfredolemmuel@gmail.com</a>
                             <div class="contact-social-icons">
-                                <a href="[YOUR GITHUB URL]" target="_blank"><i data-lucide="github"></i></a>
+                                <a href="https://github.com/Alfredy-yyx123" target="_blank"><i data-lucide="github"></i></a>
                                 <a href="[YOUR LINKEDIN URL]" target="_blank"><i data-lucide="linkedin"></i></a>
                             </div>
                         </div>
@@ -1082,7 +1082,7 @@
 
             <footer class="main-footer">
                 <div class="footer-content">
-                    <p>&copy; <span id="year"></span> [YOUR FULL NAME]. All rights reserved.</p>
+                    <p>&copy; <span id="year"></span> Alfredo Lemmuel Reyes. All rights reserved.</p>
                     <nav class="footer-nav">
                         <a href="#hero">Top</a>
                         <a href="#projects">Work</a>
@@ -1093,238 +1093,6 @@
         </section>
     </main>
 
-    <script type="module">
-        const CONFIG = {
-            user: {
-                name: "[YOUR FULL NAME]",
-                initials: "[YFN]",
-                title: "[YOUR PROFESSIONAL TITLE]",
-                location: "[YOUR LOCATION]",
-                email: "[YOUR EMAIL ADDRESS]",
-                github: "[YOUR GITHUB URL]",
-                linkedin: "[YOUR LINKEDIN URL]",
-            },
-            skills: [
-                { category: "Programming Languages", items: ["Python", "Java", "JavaScript", "C++", "SQL"] },
-                { category: "Front-End Development", items: ["HTML5", "CSS3", "React", "Tailwind CSS", "Modern JS"] },
-                { category: "Back-End Development", items: ["Node.js", "Django", "FastAPI", "REST APIs"] },
-                { category: "Databases", items: ["PostgreSQL", "MongoDB", "SQLite", "Redis"] },
-                { category: "Tools & Platforms", items: ["Git", "GitHub", "Docker", "AWS", "Linux"] },
-                { category: "Data & ML", items: ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "PyTorch"], learning: true }
-            ],
-            projects: [
-                { id: "01", title: "Stack Lens", description: "A specialized diagnostic tool designed to help developers investigate database and deployment issues in real-time.", problem: "Debugging distributed systems often requires jumping between multiple logs and dashboards, leading to fragmented context.", solution: "A unified lens that aggregates system health metrics and query logs into a single, searchable timeline.", tech: ["Python", "React", "PostgreSQL", "Redis"], link: "#", repo: "#", status: "Completed", image: "https://via.placeholder.com/800x450?text=Stack+Lens" },
-                { id: "02", title: "LCGMS", description: "A graduate profiling and after-care monitoring system for managing records and tracking alumni services.", problem: "Educational institutions lack a streamlined way to track alumni career progression and provide targeted after-care services.", solution: "A secure portal for alumni record management with automated reporting and profiling tools.", tech: ["Java", "Spring Boot", "MySQL", "Thymeleaf"], link: "#", repo: "#", status: "In Progress", image: "https://via.placeholder.com/800x450?text=LCGMS" },
-                { id: "03", title: "Automated Data Analytics System", description: "A system that processes XML data feeds and generates automated business intelligence reports.", problem: "Manual processing of large XML datasets for business reporting is error-prone and time-consuming.", solution: "An automated pipeline that parses XML data and transforms it into visual PDF/HTML reports based on predefined rules.", tech: ["Python", "lxml", "ReportLab", "SQLite"], link: "#", repo: "#", status: "Completed", image: "https://via.placeholder.com/800x450?text=Data+Analytics+System" }
-            ],
-            journey: [
-                { year: "2024 - Present", title: "Professional Development", description: "Focused on mastering full-stack architectures and exploring the intersection of AI and software engineering.", tags: ["Full-Stack", "Cloud Computing", "AI"] },
-                { year: "2021 - 2023", title: "Academic Journey", description: "Pursuing [YOUR DEGREE] at [YOUR SCHOOL]. Focused on software engineering principles and database management.", tags: ["Computer Science", "Algorithms", "Databases"] },
-                { year: "2020", title: "Programming Start", description: "First deep dive into Python and the basics of computer science. Built first automation scripts and simple games.", tags: ["Python", "Learning"] }
-            ]
-        };
-
-        // --- Particle & Background System ---
-        class BackgroundManager {
-            constructor() {
-                this.canvas = document.getElementById('particle-canvas');
-                this.ctx = this.canvas.getContext('2d');
-                this.grid = document.getElementById('grid-overlay');
-                this.particles = [];
-                this.mouse = { x: null, y: null };
-                this.init();
-            }
-
-            init() {
-                this.resize();
-                window.addEventListener('resize', () => this.resize());
-                window.addEventListener('mousemove', (e) => {
-                    this.mouse.x = e.clientX;
-                    this.mouse.y = e.clientY;
-
-                    const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
-                    const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
-                    this.grid.style.transform = `translate(${moveX}px, ${moveY}px)`;
-                });
-
-                for (let i = 0; i < 150; i++) {
-                    this.particles.push(new Particle(this.canvas.width, this.canvas.height));
-                }
-                this.animate();
-            }
-
-            resize() {
-                this.canvas.width = window.innerWidth;
-                this.canvas.height = window.innerHeight;
-            }
-
-            animate() {
-                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
-                for (let i = 0; i < this.particles.length; i++) {
-                    for (let j = i + 1; j < this.particles.length; j++) {
-                        const dist = this.getDist(this.particles[i], this.particles[j]);
-                        if (dist < 150) {
-                            this.ctx.strokeStyle = `rgba(2, 210, 227, ${0.3 - dist/500})`;
-                            this.ctx.lineWidth = 0.8;
-                            this.ctx.beginPath();
-                            this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
-                            this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
-                            this.ctx.stroke();
-                        }
-                    }
-                }
-
-                this.particles.forEach(p => {
-                    p.update(this.mouse);
-                    p.draw(this.ctx);
-                });
-                requestAnimationFrame(() => this.animate());
-            }
-
-            getDist(p1, p2) {
-                return Math.sqrt((p1.x - p2.x)**2 + (p1.y - p2.y)**2);
-            }
-        }
-
-        class Particle {
-            constructor(w, h) {
-                this.x = Math.random() * w;
-                this.y = Math.random() * h;
-                this.size = Math.random() * 2 + 1;
-                this.vx = (Math.random() - 0.5) * 0.8;
-                this.vy = (Math.random() - 0.5) * 0.8;
-            }
-
-            update(mouse) {
-                this.x += this.vx;
-                this.y += this.vy;
-
-                if (this.x < 0 || this.x > window.innerWidth) this.vx *= -1;
-                if (this.y < 0 || this.y > window.innerHeight) this.vy *= -1;
-
-                if (mouse.x) {
-                    const dx = mouse.x - this.x;
-                    const dy = mouse.y - this.y;
-                    const dist = Math.sqrt(dx*dx + dy*dy);
-                    if (dist < 200) {
-                        this.x -= dx * 0.02;
-                        this.y -= dy * 0.02;
-                    }
-                }
-            }
-
-            draw(ctx) {
-                ctx.fillStyle = 'rgba(2, 210, 227, 0.8)';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
-
-        // --- Initialization ---
-        function init() {
-            new BackgroundManager();
-            lucide.createIcons();
-            renderSkills();
-            renderProjects();
-            renderJourney();
-            setupNavigation();
-            setupCursor();
-            document.getElementById('year').textContent = new Date().getFullYear();
-        }
-
-        function setupCursor() {
-            const cursor = document.getElementById('cursor');
-            window.addEventListener('mousemove', (e) => {
-                cursor.style.left = e.clientX + 'px';
-                cursor.style.top = e.clientY + 'px';
-            });
-
-            document.querySelectorAll('a, button, .skill-tag, .stat-card').forEach(el => {
-                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-            });
-        }
-
-        function renderSkills() {
-            const container = document.getElementById('skills-container');
-            if (!container) return;
-            container.innerHTML = CONFIG.skills.map(cat => `
-                <div class="skill-category">
-                    <h3 class="category-title">${cat.category}</h3>
-                    <div class="skill-list">
-                        ${cat.items.map(item => `<span class="skill-tag ${cat.learning ? 'learning' : ''}">${item}</span>`).join('')}
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function renderProjects() {
-            const container = document.getElementById('projects-container');
-            if (!container) return;
-            container.innerHTML = CONFIG.projects.map(project => `
-                <div class="project-card">
-                    <div class="project-visual">
-                        <img src="${project.image}" alt="${project.title}">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-num">${project.id}</span>
-                        <h3 class="project-title">${project.title}</h3>
-                        <p class="project-desc">${project.description}</p>
-                        <div class="project-meta">
-                            <span class="project-meta-item"><span class="project-meta-label">Problem:</span> ${project.problem}</span>
-                            <span class="project-meta-item"><span class="project-meta-label">Solution:</span> ${project.solution}</span>
-                        </div>
-                        <div class="project-tags">
-                            ${project.tech.map(t => `<span class="project-tag">${t}</span>`).join('')}
-                        </div>
-                        <div class="project-links">
-                            <a href="${project.repo}" target="_blank">Repository <i data-lucide="github" style="width: 14px; height: 14px; vertical-align: middle; margin-left: 5px;"></i></a>
-                            <a href="${project.link}" target="_blank">Live Demo <i data-lucide="external-link" style="width: 14px; height: 14px; vertical-align: middle; margin-left: 5px;"></i></a>
-                        </div>
-                        <div class="project-status" style="margin-top: 20px; font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted);">
-                            Status: ${project.status}
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-            lucide.createIcons();
-        }
-
-        function renderJourney() {
-            const container = document.getElementById('timeline-container');
-            if (!container) return;
-            container.innerHTML = CONFIG.journey.map(item => `
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">${item.year}</span>
-                        <h3 class="timeline-title" style="font-family: var(--font-heading); text-transform: uppercase; margin-bottom: 10px; font-size: 1.2rem;">${item.title}</h3>
-                        <p class="timeline-text" style="color: rgba(247, 250, 251, 0.8); margin-bottom: 15px;">${item.description}</p>
-                        <div class="journey-tags" style="display: flex; gap: 10px; flex-wrap: wrap;">
-                            ${item.tags.map(tag => `<span class="skill-tag" style="border-color: var(--border-dark); color: var(--bg-light); font-size: 0.7rem;">${tag}</span>`).join('')}
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function setupNavigation() {
-            const nav = document.querySelector('.main-nav');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) nav.classList.add('scrolled');
-                else nav.classList.remove('scrolled');
-            });
-            const toggle = document.querySelector('.mobile-nav-toggle');
-            if (toggle) {
-                toggle.addEventListener('click', () => {
-                    document.querySelector('.nav-links').classList.toggle('active');
-                });
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', init);
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
